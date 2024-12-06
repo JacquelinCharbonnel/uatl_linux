@@ -107,7 +107,7 @@ qui se présente comme un ensemble de fonctions (les fonctions systèmes) que le
 </div>
 <div class="paragraph">
 <p>Pour avoir un système d&#8217;exploitation complet, il faut accompagner le noyau de commandes
-permettant à un utilisateur de piloter et de configurer le système.
+permettant à un humain de piloter et de configurer le système.
 C&#8217;est ce qu&#8217;apporte GNU.</p>
 </div>
 <div class="admonitionblock note">
@@ -142,18 +142,6 @@ Par conséquent, GNU/Linux est un système d&#8217;exploitation de type Unix.</p
 </div>
 <div class="paragraph">
 <p>Le code de GNU est ouvert : c&#8217;est du logiciel libre.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Le MIT était à l&#8217;époque un haut lieu de l&#8217;innovation informatique et un environnement propice à la collaboration et au partage.
-</td>
-</tr>
-</table>
 </div>
 <div class="imageblock right">
 <div class="content">
@@ -219,8 +207,8 @@ Mais ce projet, bien que novateur, s&#8217;avére trop complexe et gourmand en r
 </div>
 <div class="paragraph">
 <p>Deux chercheurs des Bell Labs impliqués dans le projet Multics, Ken Thompson et Dennis Ritchie, décident alors de développer leur propre système, plus simple et efficace.
-C&#8217;est ainsi que nait le système Unics, développé sur un vieux DPD-7.
-Mais Unics, écrit en assembleur, n&#8217;est pas transportable sur d&#8217;autres architectures matérielles.
+C&#8217;est ainsi que nait le système Unics, développé sur un vieux DPD-7, un mini-ordinateur DEC.
+Mais Unics, écrit en assembleur, n&#8217;est pas transposable sur d&#8217;autres architectures matérielles.
 L&#8217;idée germe alors de créer un langage de programmation spécialement pour réécrire Unics.
 C&#8217;est ainsi que Ritchie crée le langage C, et que Unics, alias Unix, est réécrit en C.
 Il devient ainsi portable, et se diffuse rapidement dans les universités, ce qui le rend populaire.</p>
@@ -232,7 +220,8 @@ Il est de ce fait efficace, c&#8217;est-à-dire que les programmes C sont petits
 C est inégalable dans les domaines des systèmes d&#8217;exploitation (Windows est écrit en C), des drivers, et du temps réel.</p>
 </div>
 <div class="paragraph">
-<p>Unix est encore aujourd&#8217;hui majoritairement écrit en C, même si, récemment, Thorvals ouvre petit à petit la porte à un langage plus sécurisé que C : Rust.</p>
+<p>Unix est encore aujourd&#8217;hui majoritairement écrit en C.
+Mais récemment, pour le code de Linux, Thorvals ouvre petit à petit la porte à un nouveau langage, plus sécurisé que C : Rust.</p>
 </div>
 <div class="paragraph">
 <p>Unix représente une grande famille de systèmes d&#8217;exploitation.</p>
@@ -244,22 +233,29 @@ C est inégalable dans les domaines des systèmes d&#8217;exploitation (Windows 
 <div class="title"><a href="https://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg">Unix history version simple (source wikipédia)</a></div>
 </div>
 <div class="paragraph">
-<p>Certains sont propriétaires, c&#8217;est-à-dire développée par une entreprise et vendue sous licence.
-C&#8217;est le cas de :</p>
+<p>Certains Unix sont propriétaires, donc vendus sous licence.
+Ils sont développés par des sociétés commerciales, principalement des constructeurs de mini-ordinateurs et stations de travail.
+On peut citer :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>SunOS et Solaris (SUN)</p>
+<p>Xenix (créé par Microsoft, puis cédé à SCO)</p>
 </li>
 <li>
 <p>NeXTSTEP (NeXT)</p>
 </li>
 <li>
-<p>AIX (IBM)</p>
+<p>SunOS et Solaris (SUN)</p>
 </li>
 <li>
 <p>HP-UX (Hewlett-Packard)</p>
+</li>
+<li>
+<p>True64 (Digital Equipment Corporation)</p>
+</li>
+<li>
+<p>AIX (IBM)</p>
 </li>
 <li>
 <p>IRIX (Silicon Graphics)</p>
@@ -268,31 +264,20 @@ C&#8217;est le cas de :</p>
 <p>Unixware (Novell)</p>
 </li>
 <li>
-<p>Xenix (créé par Microsoft, distribué par SCO)</p>
-</li>
-<li>
 <p>MacOS (Apple)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Leur importance a considérablement diminué ces dernières années, en raison de l&#8217;essor des Unix libres, comme :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>GNU/Linux</p>
-</li>
-<li>
-<p>FreeBSD, OpenBSD et NetBSD</p>
-</li>
-<li>
-<p>OpenSolaris</p>
-</li>
-</ul>
+<p>Xenix est le premier Unix propriétaire tournant sur PC.</p>
 </div>
 <div class="paragraph">
-<p>Avec Unix, l&#8217;utilisateur dispose d&#8217;un jeu de commandes à peu près standard, utilisable en mode texte depuis un terminal.
+<p>L&#8217;arrivée des Unix libres
+GNU/Linux et les BSD (FreeBSD, OpenBSD et NetBSD)
+a relativisé l&#8217;importance des Unix propriétaires.</p>
+</div>
+<div class="paragraph">
+<p>Avec Unix, l&#8217;utilisateur dispose d&#8217;un jeu de commandes à peu près standard, utilisable en mode texte depuis un terminal sur tous ces systèmes.
 Chacune d&#8217;elles réalise une fonction simple, et possède la faculté de se combiner facilement aux autres pour réaliser des actions plus complexes.</p>
 </div>
 </div>
@@ -301,103 +286,199 @@ Chacune d&#8217;elles réalise une fonction simple, et possède la faculté de s
 <h2 id="_distributions_linux"><a class="anchor" href="#_distributions_linux"></a>4. Distributions Linux</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Une distribution Linux se compose du système GNU/Linux et d&#8217;une sélection d&#8217;applications.
-Il existe un grand nombre de distribution Linux.
-Debian, Red Hat Enterprise Linux (RHEL), Ubuntu, Fedora, CentOS, Gentoo, AlmaLinux, Arch Linux, openSUSE sont des distributions bien connues.</p>
+<p>Une distribution Linux se compose du système GNU/Linux et d&#8217;une sélection d&#8217;applications open-source (donc développées par la communauté).
+Créer une distribution consiste donc à choisir les applications à intégrer (<em>faire son marché</em> sur Internet), et les intégrer
+ (les compiler, les configurer) de façon à constituer un système complet (par rapport aux objectifs fixés) qui fonctionne harmonieusement.</p>
 </div>
 <div class="paragraph">
-<p>Les distributions se distinguent par :</p>
+<p>L&#8217;ensemble des applications retenues par la distribution représente l&#8217;ensemble des applications installables par l&#8217;utilisateur
+(mais elles ne sont pas toutes installées par défaut).
+Chaque application se présente sous forme d&#8217;un paquet (<em>package</em>), contenant l&#8217;exécutable, la configuration ainsi que des informations sur la dépendance envers d&#8217;autres packages.
+Les packages sont archivés dans des dépôts (<em>repositories</em>), dont la structure dépend du type des packages qu&#8217;il contient.</p>
+</div>
+<div class="sect2">
+<h3 id="_distinctions"><a class="anchor" href="#_distinctions"></a>4.1. Distinctions</h3>
+<div class="paragraph">
+<p>Une distribution donnée utilise un système de packaging donné.
+C&#8217;est un critère de différentation important entre les distributions,
+car 2 distributions basées sur le même système de packaging ont une organisation identique de leur espace disque (leurs fichiers sont situés dans les mếmes répertoires),
+et utilisent les mêmes commandes pour gérer les applications.</p>
+</div>
+<div class="paragraph">
+<p>Les distributions se distinguent aussi par :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>le public visé :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>distribution grand public (Ubuntu, Linux Mint)</p>
+<p>le public visé : par exemple,
+le grand public,
+les enfants (PrimTux, Sugar on a Stick),
+les informaticiens (Gentoo, Arch Linux) ;</p>
 </li>
 <li>
-<p>distribution scientifique (Scientific Linux)</p>
+<p>la fonction de l&#8217;appareil cible :
+poste de travail (Ubuntu, Linux Mint, Fedora, OpenSuse),
+serveur (RHEL, CentOS, AlmaLinux) ou smartphone ;</p>
 </li>
 <li>
-<p>distribution pour les enfants (PrimTux, Sugar on a Stick)</p>
+<p>la stabilité : applications testées et éprouvées, mais parfois anciennes (Debian),
+ou au contraire applications en dernières versions (Fedora) ;</p>
 </li>
 <li>
-<p>distribution pour informaticiens (Gentoo, Arch Linux)</p>
+<p>la tolérence aux logiciels non libres, notamment au niveau des pilotes et des codecs ;</p>
+</li>
+<li>
+<p>la durée de vie des versions et la cadence des sorties, des plus sereinnes
+(par exemple RHEL, avec la durée de vie de ses versions de 10 ans)
+aux plus dynamiques
+(par exemple Fedora, avec une version majeure tous les 6 mois, maintenues 1 an).</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>l&#8217;architecture visée :</p>
+</div>
+<div class="sect2">
+<h3 id="_libre_ou_commerciale"><a class="anchor" href="#_libre_ou_commerciale"></a>4.2. Libre ou commerciale</h3>
+<div class="paragraph">
+<p>La distribution peut être gérée par la communauté (distribution libre) ou par une société privée (distribution commerciale).
+Cela n&#8217;a pas d&#8217;impact sur le résultat final proposé qui reste libre, mais cela influe sur la stratégie et la philosophie de la distribution
+(car généralement ces sociétés comptent générer des profits sur le support qu&#8217;elles en proposent).</p>
+</div>
+<div class="paragraph">
+<p>Parmi les distributions commerciales répandues, on peut citer :</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>distribution pour poste de travail (Ubuntu, Linux Mint, Fedora, OpenSuse)</p>
+<p>RHEL (RedHat Enterprise Linux), créée et maintenue par RedHat,</p>
 </li>
 <li>
-<p>distribution pour serveur (RHEL, CentOS, AlmaLinux)</p>
+<p>Ubuntu, crée et maintenue par Canonical,</p>
+</li>
+<li>
+<p>SLE (SUSE Linux Enterprise), maintenue aujourd&#8217;hui par Suse,</p>
+</li>
+<li>
+<p>Oracle Linux.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>la stabilité :</p>
+<div class="paragraph">
+<p>Parmi les distributions libres répandues, on peut citer :
+Debian, Fedora, CentOS, Gentoo, AlmaLinux, Arch Linux, openSUSE.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_packaging_rpm"><a class="anchor" href="#_packaging_rpm"></a>4.3. Packaging RPM</h3>
+<div class="paragraph">
+<p>RPM (RedHat Package Manager) est l&#8217;un des systèmes de packaging incontournables, créé par la société RedHat.</p>
+</div>
+<div class="paragraph">
+<p>RedHat crée sa distribution <em>RedHat Linux</em> en 1997, et définit à cette occasion le format RPM de ses packages et les dépôts YUM associés.
+Mais en 2001, elle décide de remplacer sa distribution <em>RedHat Linux</em> par deux nouvelles distributions : <em>RedHat Enterprise Linux</em> (RHEL) et Fedora.</p>
+</div>
+<div class="paragraph">
+<p>RHEL est commercialisée sous la forme d&#8217;une souscription :
+elle n&#8217;est pas téléchargeable gratuitement.</p>
+</div>
+<div class="paragraph">
+<p>Fedora, quant à elle, est une distribution communautaire.
+C&#8217;est une sorte de laboratoire
+qui teste les dernières versions des applications, valide de nouveaux concepts, etc.
+Les technologies ainsi validées et éprouvées grandeur nature sont intégrées quelques années après dans RHEL.</p>
+</div>
+<div class="paragraph">
+<p>Malgré son caractère expérimental, Fedora est une distribution fiable.
+Par contre, on n’est pas à l’abri d’un saut technologique entre 2 versions majeures successives.</p>
+</div>
+<div class="paragraph">
+<p>La disparition de la distribution gratuite <em>RedHat Linux</em>,
+couramment utilisée sur serveurs en entreprise et dans l&#8217;enseignement supérieur/recherche,
+a fait réagir la communauté,
+qui a alors créer, en réponse, la distribution CentOS (2002), un clone de RHEL.</p>
+</div>
+<div class="paragraph">
+<p>En 2018, IBM rachète RedHat pour 34 milliards de dollars (la plus grosse acquisition de son histoire).</p>
+</div>
+<div class="paragraph">
+<p>CentOS, parasite de RedHat, traverse des moments difficiles.
+Mais RedHat finit par la soutenir, à condition qu&#8217;elle passe du statut de clone de RHEL à celui d&#8217;incubateur (comme Fedora, mais avec une durée de vie longue).</p>
+</div>
+<div class="paragraph">
+<p>C&#8217;est pendant les moments d&#8217;incertitude quant à sa survie de CentOS qu&#8217;apparait la distribution <em>Scientific Linux</em>,
+un clone de CentOS développée par la communauté des laboratoires de physique des particules (dont le CERN).
+C&#8217;est aussi à cette époque qu&#8217;apparait AlmaLinux (2020).</p>
+</div>
+<div class="paragraph">
+<p>En résumé, ces 6 distributions sont très proches les unes des autres, et ne se distinguent, hormis l&#8217;aspect commercial,
+que par le rythme des versions et leur durée de vie.</p>
+</div>
+<div class="paragraph">
+<p>D&#8217;autres distributions utilisent le packaging RPM, comme par exemple
+Rocky Linux, Oracle Linux, SUSE Linux Enterprise Server et openSUSE, Mageia et Mandriva.</p>
+</div>
+<div class="paragraph">
+<p><em>Proposer la bonne application pour chaque problématique</em> pourrait être la devise du packaging RPM.
+Autrement dit, il ne s&#8217;agit pas de packager toutes les applications open source existantes sur Internet, mais les meilleures.</p>
+</div>
+<div class="paragraph">
+<p>RedHat a été la première entreprise à commercialiser une distribution Linux.
+En proposant un support commercial, elle a rendu le système plus accessible aux entreprises et a contribué à le légitimer dans le monde professionnel.
+Red Hat investit fortement dans la communauté Linux en contribuant à de nombreux projets open source, en organisant des conférences et en soutenant les développeurs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_packaging_deb"><a class="anchor" href="#_packaging_deb"></a>4.4. Packaging DEB</h3>
+<div class="paragraph">
+<p>C&#8217;est l&#8217;autre système de packaging incontournable, utilisé par la distribution Debian.</p>
+</div>
+<div class="paragraph">
+<p>La distribution Debian est créée en 1994 par le <em>Debian Project</em>, une organisation communautaire.
+Celle-ci élabore une constitution qui définit le fonctionnement interne de l&#8217;organisation, les méthodes de prise de décisions et les rôles des différents acteurs.
+La plupart des décisions sont prises par résolution générale ou par vote.</p>
+</div>
+<div class="paragraph">
+<p>Debian se distingue par son caractère résolument non commercial et par son mode de gouvernance démocratique.
+Sa communauté est active.</p>
+</div>
+<div class="paragraph">
+<p>La distribution se présente sous 3 déclinaisons :</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>distribution composée de versions testées et éprouvées, donc parfois anciennes (Debian)</p>
+<p>stable : version par défaut et la seule réellement stable,</p>
 </li>
 <li>
-<p>distribution misant sur les dernières versions au gout du jour (Fedora)</p>
+<p>testing : version en amont de la stable, offrant des paquets récents,</p>
+</li>
+<li>
+<p>unstable : version en amont de la testing, en constante évolution, version expérimentale exposée à des bugs de sévérité grave.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>la tolérence aux logiciels non libres :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>distributions n&#8217;intègrant strictement que des logiciels libres (Debian)</p>
-</li>
-<li>
-<p>distribution proposant aussi des pilotes ou des codecs propriétaires (RHEL, Ubuntu)</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Le cycle de développement est de 2 ans, avec une nouvelle version stable en début d&#8217;année paire.</p>
 </div>
-</li>
-<li>
-<p>le rythme des évolutions :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>une version majeure tous les 6 mois, maintenue 1 an pour Fedora</p>
-</li>
-<li>
-<p>les versions LTS (Long Term Support) maintenues 5 ans pour Debian Stable et Ubuntu LTS</p>
-</li>
-<li>
-<p>les versions de RHEL et CentOS maintenues 10 ans</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Le réputation de Debian repose sur sa grande stabilité, et le vaste catalogue d&#8217;applications qu&#8217;elle propose.</p>
 </div>
-</li>
-<li>
-<p>les référentiels logiciels, dont les plus connus sont :</p>
-<div class="ulist">
-<ul>
-<li>
-<p>les <code>.rpm</code> : RHEL, CentOS, Fedora</p>
-</li>
-<li>
-<p>les <code>.deb</code> : Debian, Ubuntu</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Les distributions
+Ubuntu,
+Linux Mint,
+KDE Neon,
+elementary OS,
+Zorin OS,
+Kali Linux utilisent les dépots Debian.</p>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>Ubuntu est une distribution qui s&#8217;appuie sur Debian, en misant sur la convivialité.
+Elle est très populaire en France, appréciée pour sa facilité d&#8217;utilisation et sa large communauté francophone.
+Sa documentation en français est abondante.
+Elle est sponsorisée par la société Canonical qui finance les développeurs, organise les événements et fournit un support commercial.
+Canonical assure une certaine stabilité financière au projet, ce qui garantit sa pérennité.
+La versions LTS (Long Term Support) d&#8217;Ubuntu, publiées tous les deux ans, offre un support à long terme (5 ans) pour les mises à jour de sécurité.</p>
+</div>
 </div>
 </div>
 </div>
@@ -423,13 +504,13 @@ C&#8217;est comme Windows 2 qu&#8217;on lançait depuis MS/DOS.</p>
 Il existe beaucoup de desktops : GNOME, KDE Plasma, Cinnamon, MATE, XFCE, LXQt, etc.</p>
 </div>
 <div class="paragraph">
-<p>Les deux environnements de bureau les plus répandus sont GNOME et KDE Plasma.
+<p>Les deux environnements de bureau GNOME et KDE Plasma sont les plus élaborés.
 GNOME offre peu de réglage, il convient très bien aux utilisateurs qui veulent un environnement qui marche, sans se poser plus de questions.
 KDE Plasma, au contraire, est très personnalisable.</p>
 </div>
 <div class="paragraph">
-<p>Le passage de GNOME version 2 à GNOME version 3 en 2011 a été un chamboulement.
-L&#8217;idée de GNOME 3 a été d&#8217;unifier l&#8217;apparence sur ordinateur et sur smartphone.
+<p>Le passage de GNOME version 2 à GNOME version 3 en 2011 a chamboulé les utilisateurs.
+GNOME 3 a complétement revu son look pour proposer une même apparence sur ordinateur et sur smartphone (!).
 Un traumatisme pour les utilisateurs de GNOME 2 qui n&#8217;aiment pas le changement.
 GNOME 2 avait un look familier, proche de celui de Windows.
 Le look de GNOME 3 n&#8217;a rien à voir.
@@ -440,16 +521,16 @@ C&#8217;est pourquoi un certain nombre d&#8217;utilisateurs déconcertés n&#821
 <div class="paragraph">
 <p>C&#8217;est ainsi qu&#8217;est apparu MATE, un fork de GNOME 2.
 MATE vise à préserver l&#8217;apparence et le fonctionnement de l&#8217;environnement GNOME 2,
-donc idéal pour ceux qui préfèrent une interface <em>à l&#8217;ancienne</em>, sans nouveauté.</p>
+donc idéal pour ceux qui préfèrent une interface <em>à l&#8217;ancienne</em>.</p>
 </div>
 <div class="paragraph">
 <p>C&#8217;est ainsi qu&#8217;est également apparu Cinnamon, un fork de GNOME 3, mais doté d&#8217;un look plus classique (mais plus moderne que MATE).
 Cinnamon est apprécié pour son utilisation sans surprise et sa personnalisation facile.</p>
 </div>
 <div class="paragraph">
-<p>GNOME et KDE Plasma sont des environnements qui nécessitent des ressources pour s&#8217;exécuter convenablement.
-Pour les utilisateurs de machines peu puissantes, un environnement léger comme XFCE est préférable.
-LXQt est un desktop encore plus léger.</p>
+<p>GNOME et KDE Plasma sont des environnements relativement gourmands en ressources.
+Pour les utilisateurs de machines peu puissantes, un environnement léger comme XFCE est préférable,
+de même que LXQt, encore plus léger.</p>
 </div>
 <div class="admonitionblock note">
 <table>
